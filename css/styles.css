@@ -7,7 +7,7 @@
   margin: 0;
   box-sizing: border-box;
   list-style-type: none;
-  font-family: "Noto Sans";
+  font-family: "Proxima Nova Rg";
 }
 
 html,
@@ -127,7 +127,6 @@ textarea {
 
 .header .wrapper .upper_part .logo_part .logo {
   padding-right: 18px;
-  margin-right: 18px;
 }
 
 .header .wrapper .upper_part .logo_part .text {
@@ -178,7 +177,8 @@ textarea {
 
 .header .wrapper .upper_part .contuct_part .contuct_item .upper {
   margin-bottom: 4px;
-  font-weight: 600;
+  font-weight: 400;
+  font-style: italic;
   font-size: 18px;
   line-height: 22px;
   color: #000000;
@@ -193,6 +193,10 @@ textarea {
   line-height: 17px;
   color: #000000;
   cursor: pointer;
+}
+
+.header .wrapper .upper_part .contuct_part .contuct_item:last-child {
+  text-align: right;
 }
 
 .header .wrapper .upper_part .burger {
@@ -227,6 +231,24 @@ textarea {
   line-height: 22px;
   color: #000000;
   display: block;
+  position: relative;
+}
+
+.header .wrapper .lower_part .menu_link:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  display: block;
+  background: #df1515;
+  z-index: 10;
+  opacity: 0;
+}
+
+.header .wrapper .lower_part .menu_link:hover:after {
+  opacity: 1;
 }
 
 .header .wrapper .lower_part ._with_add {
@@ -296,6 +318,23 @@ textarea {
   visibility: visible;
 }
 
+.header .wrapper .lower_part .contuct_item .upper {
+  margin-top: 20px;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.header .wrapper .lower_part .contuct_item .upper span {
+  color: #df1515;
+}
+
+.header .wrapper .lower_part .contuct_item .lower {
+  display: none;
+}
+
 h2.block_title {
   font-size: 64px;
   line-height: 78/64;
@@ -303,6 +342,24 @@ h2.block_title {
   font-weight: normal;
   font-size: calc(28 * 1px + 0.025 * 100vw);
   font-family: "Proxima Nova Rg";
+}
+
+.img_item:before {
+  transition: 0.3s;
+  z-index: 3;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #0009;
+  opacity: 0;
+}
+
+.img_item:hover:before {
+  opacity: 1;
 }
 
 .main {
@@ -333,6 +390,7 @@ h2.block_title {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #01020b;
+  font-family: "Noto Sans";
   position: relative;
 }
 
@@ -371,12 +429,10 @@ h2.block_title {
 .main .first_full_screen .wrapper .content_box .desc {
   margin-top: 20px;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 2;
   letter-spacing: 0.03em;
   color: #000000;
   max-width: 650px;
-  font-size: 18px;
-  line-height: 22px;
   letter-spacing: 0.03em;
   color: #000000;
 }
@@ -670,6 +726,17 @@ h2.block_title {
   display: none;
 }
 
+.main .departament_links .block_cont .img_item:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #0009;
+}
+
 .main .departament_links .adv_cont .part_title {
   margin-bottom: 65px;
   font-weight: bold;
@@ -959,7 +1026,7 @@ h2.block_title {
 }
 
 .main .about_us .block_header .left_part .img {
-  transform: translate(-25%, -40%);
+  transform: translate(-25%, -35%);
   position: relative;
 }
 
@@ -1064,6 +1131,157 @@ h2.block_title {
   margin-right: 50px;
 }
 
+.main .vacations {
+  padding: 124px 0 160px;
+}
+
+.main .vacations .block_title {
+  margin-bottom: 30px;
+}
+
+.main .vacations .desc {
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 100px;
+}
+
+.main .vacations .content_box {
+  display: flex;
+  align-items: stretch;
+  margin: 0 -35px;
+}
+
+.main .vacations .content_box .vac_item {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 35px;
+}
+
+.main .vacations .content_box .vac_item .vac_header {
+  font-size: 36px;
+  line-height: 1.2;
+  color: #000000;
+  margin-bottom: 50px;
+}
+
+.main .vacations .content_box .vac_item .we_work {
+  padding-top: 30px;
+  border-top: 1px solid #c4c4c4;
+  font-size: 18px;
+  line-height: 157.4%;
+}
+
+.main .vacations .content_box .vac_item .need {
+  font-size: 18px;
+  line-height: 157.4%;
+  flex: 1 1 auto;
+  margin-bottom: 30px;
+}
+
+.main .vacations .where_to_leeve {
+  margin-top: 60px;
+  font-size: 31px;
+  line-height: 38px;
+  color: #000000;
+}
+
+.main .vacations .where_to_leeve a {
+  font-weight: bold;
+}
+
+.main .contucts {
+  padding: 105px 0 146px;
+}
+
+.main .contucts .wrapper .block_title {
+  margin-bottom: 70px;
+}
+
+.main .contucts .content_box {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+  padding-bottom: 100px;
+}
+
+.main .contucts .content_box .contuct_item {
+  flex: 0 1 calc(50% - 40px);
+  margin: 0 20px 80px;
+}
+
+.main .contucts .content_box .contuct_item:nth-child(1),
+.main .contucts .content_box .contuct_item:nth-child(2) {
+  flex: 0 1 calc(25% - 40px);
+}
+
+.main .contucts .content_box .contuct_item .item_title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.main .contucts .content_box .contuct_item .text,
+.main .contucts .content_box .contuct_item a {
+  font-style: italic;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.main .contucts .content_box .contuct_item:last-child .text {
+  font-style: normal;
+}
+
+.main .contucts .work_time {
+  border-top: 1px solid #c4c4c4;
+  padding-top: 60px;
+}
+
+.main .contucts .work_time p {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.main .contucts .work_time p:first-child {
+  font-weight: bold;
+}
+
+.main .structure {
+  padding: 124px 0 200px;
+}
+
+.main .structure .block_title {
+  margin-bottom: 100px;
+}
+
+.main .structure .block_body .part_title {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.main .structure .block_body .part_desc {
+  font-size: 24px;
+  line-height: 144.6%;
+  color: #000000;
+  margin-bottom: 70px;
+}
+
+.main .structure .block_body .img {
+  max-width: 1161px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.main .structure .block_body .img img {
+  width: 100%;
+}
+
 .main .programs {
   background: #f5f4f2;
   padding: 112px 0 145px;
@@ -1075,7 +1293,7 @@ h2.block_title {
 
 .main .programs .programs_desc {
   font-size: 18px;
-  line-height: 22px;
+  line-height: 2;
   color: #000000;
   padding-bottom: 47px;
   border-bottom: 1px solid #dcdfe0;
@@ -1098,6 +1316,8 @@ h2.block_title {
   font-size: 20px;
   line-height: 24px;
   color: #000000;
+  font-style: italic;
+  line-height: 2;
 }
 
 .main .programs .programs_body {
@@ -1186,7 +1406,7 @@ h2.block_title {
 }
 
 .main .programs .programs_body .col:first-child .img_big_item .img_item .content {
-  padding: 50% 0 54px 54px;
+  padding: 50% 10px 54px 54px;
 }
 
 .main .programs .programs_body .col:first-child .img_big_item .img_item .content .text {
@@ -1377,7 +1597,7 @@ h2.block_title {
 .main .wy_we_part .slider_wy_we_block .slider_wy_we_controls .slider_arrow {
   position: absolute;
   top: calc(50% - 30px);
-  left: -10%;
+  left: -50px;
   cursor: pointer;
   transform: translate(0, -50%);
 }
@@ -1387,7 +1607,8 @@ h2.block_title {
 }
 
 .main .wy_we_part .slider_wy_we_block .slider_wy_we_controls .slider_arrow:last-child {
-  left: 110%;
+  left: unset;
+  right: -50px;
 }
 
 .main .factory_slider_block {
@@ -1635,6 +1856,10 @@ h2.block_title {
   padding-top: 90px;
 }
 
+.main .form_cont._vacations {
+  padding-top: 90px;
+}
+
 .main .our_teachers {
   padding-top: 140px;
   padding-bottom: 200px;
@@ -1730,7 +1955,7 @@ h2.block_title {
 .main .our_thanks .wrapper .slider_our_thanks_controls .slider_arrow {
   position: absolute;
   top: calc(50% - 30px);
-  left: -10%;
+  left: -50px;
   cursor: pointer;
   transform: translate(0, -50%);
 }
@@ -1740,7 +1965,8 @@ h2.block_title {
 }
 
 .main .our_thanks .wrapper .slider_our_thanks_controls .slider_arrow:last-child {
-  left: 110%;
+  left: unset;
+  right: -50px;
 }
 
 .main .our_friends_logos {
@@ -1764,7 +1990,7 @@ h2.block_title {
 .main .our_friends_logos .slider_logos_conrols .slider_arrow {
   position: absolute;
   top: calc(50%);
-  left: -10%;
+  left: -50px;
   cursor: pointer;
   transform: translate(0, -50%);
 }
@@ -1774,7 +2000,8 @@ h2.block_title {
 }
 
 .main .our_friends_logos .slider_logos_conrols .slider_arrow:last-child {
-  left: 110%;
+  left: unset;
+  right: -50px;
 }
 
 .main .map_cont {
@@ -2050,6 +2277,13 @@ h2.block_title {
     margin: 0 auto;
   }
 
+  .main .contucts .content_box .contuct_item .text,
+  .main .contucts .content_box .contuct_item a {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
   .footer .wrapper .footer_body .footer_col .item_header {
     flex-wrap: wrap;
   }
@@ -2197,6 +2431,40 @@ h2.block_title {
     justify-content: center;
   }
 
+  .main .vacations {
+    padding: 50px 0;
+  }
+
+  .main .contucts .wrapper .block_title {
+    margin-bottom: 40px;
+  }
+
+  .main .contucts .content_box .contuct_item:nth-child(1),
+  .main .contucts .content_box .contuct_item:nth-child(2) {
+    flex: 0 1 calc(50% - 20px);
+  }
+
+  .main .contucts .content_box .contuct_item {
+    margin: 0 10px 30px;
+    flex: 0 1 calc(50% - 20px);
+  }
+
+  .main .contucts .content_box {
+    margin: 0 -10px;
+  }
+
+  .main .contucts {
+    padding: 50px 0;
+  }
+
+  .main .structure .block_title {
+    margin-bottom: 40px;
+  }
+
+  .main .structure {
+    padding: 50px 0;
+  }
+
   .main .programs .action_cont .icon {
     margin-right: 20px;
   }
@@ -2325,6 +2593,19 @@ h2.block_title {
 }
 
 @media screen and (max-width: 900px) {
+  .main .vacations .content_box .vac_item .vac_header {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .main .vacations .content_box .vac_item {
+    margin-bottom: 30px;
+  }
+
+  .main .vacations .content_box {
+    display: block;
+  }
+
   .footer .wrapper .footer_body .footer_col .logo {
     margin-bottom: 20px;
     max-width: 200px;
@@ -2362,6 +2643,10 @@ h2.block_title {
 
   .header .wrapper .upper_part {
     margin-bottom: 0;
+  }
+
+  .header .wrapper .lower_part .menu_link:after {
+    display: none;
   }
 
   .header .wrapper .lower_part ._with_add .link_title:after {
@@ -2630,6 +2915,7 @@ h2.block_title {
 
   .main .first_full_screen .wrapper .content_box .desc {
     font-size: 15px;
+    line-height: 1.4;
   }
 
   .main .first_full_screen .reg_label .img {
@@ -2662,6 +2948,7 @@ h2.block_title {
   .main .first_full_screen._departament {
     min-height: 470px;
     height: calc(100vh - 75px);
+    background-size: 125% auto;
   }
 
   .main .first_full_screen._craft_secure .wrapper .content_box .title,
@@ -2678,10 +2965,12 @@ h2.block_title {
   .main .first_full_screen._fast_result {
     min-height: 470px;
     height: calc(100vh - 75px);
+    background-size: 125% auto;
   }
 
   .main .first_full_screen {
     min-height: 470px;
+    background-size: 125% auto;
     height: calc(100vh - 75px);
   }
 
@@ -2734,12 +3023,64 @@ h2.block_title {
     flex: 0 1 100%;
   }
 
+  .main .vacations .desc {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  .main .vacations .content_box .vac_item .vac_header {
+    font-size: 22px;
+  }
+
+  .main .vacations .content_box .vac_item .vac_header {
+    margin-bottom: 20px;
+  }
+
+  .main .vacations .content_box .vac_item .we_work {
+    padding-top: 15px;
+  }
+
+  .main .vacations .content_box .vac_item .need {
+    margin-bottom: 15px;
+  }
+
+  .main .vacations .content_box .vac_item {
+    margin-bottom: 40px;
+  }
+
+  .main .vacations .where_to_leeve {
+    font-size: 26px;
+  }
+
+  .main .contucts .content_box {
+    display: block;
+    padding-bottom: 40px;
+  }
+
+  .main .contucts .work_time {
+    padding-top: 40px;
+    font-size: 22px;
+  }
+
+  .main .map iframe {
+    height: 300px;
+  }
+
+  .main .structure .block_body .part_title {
+    font-size: 20px;
+  }
+
+  .main .structure .block_body .part_desc {
+    font-size: 16px;
+  }
+
   .main .programs .block_title {
     margin-bottom: 20px;
   }
 
   .main .programs .programs_desc {
     padding-bottom: 30px;
+    line-height: 1.4;
   }
 
   .main .programs .action_cont .text {
@@ -2776,6 +3117,7 @@ h2.block_title {
   .main .form_cont .wrapper .inputs_cont .input_item input {
     padding: 0 20px;
     height: 50px;
+    font-size: 14px;
   }
 
   .main .form_cont .wrapper .submition_part .check_box label .text {
