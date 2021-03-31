@@ -131,13 +131,17 @@ let dynamicAdaptive = () => {
     let where_insert_item = document.querySelector('nav');
     let first_pos_table = document.querySelector('.contuct_part');
 
+    let item_2 = document.querySelector('.js_contuct_item_1')
 
     let vieportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
     if (vieportWidth < 850) {
         where_insert_item.append(item);
+        where_insert_item.append(item_2);
     } else {
+        first_pos_table.append(item_2);
         first_pos_table.append(item);
+
     }
 
     window.addEventListener('resize', function () {
@@ -145,12 +149,54 @@ let dynamicAdaptive = () => {
 
         if (vieportWidth < 850) {
             where_insert_item.append(item);
+            where_insert_item.append(item_2);
         } else {
+            first_pos_table.append(item_2);
             first_pos_table.append(item);
         }
     })
 }
 
+let arrow_scroll = () => {
+    let arrow = document.querySelector('.arrow_up');
+    if (arrow) {
+        window.addEventListener('scroll', function () {
+            if (pageYOffset > 20) {
+                arrow.classList.add('_active');
+            } else {
+                arrow.classList.remove('_active');
+            }
+        })
+        arrow.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        })
+    }
+}
 
+
+let popup = () => {
+    let popup = document.querySelector('.popup_call');
+    let black = document.querySelector('.black_href');
+    let cross = document.querySelector('.cross');
+    if (cross && black && popup) {
+        document.querySelector('.js_contuct_item>.lower').addEventListener('click', function () {
+            this.classList.add('_active');
+            black.classList.add('_active');
+            popup.classList.add('_active');
+        })
+        cross.addEventListener('click', function () {
+            this.classList.remove('_active');
+            black.classList.remove('_active');
+            popup.classList.remove('_active');
+        })
+        black.addEventListener('click', function () {
+            this.classList.remove('_active');
+            black.classList.remove('_active');
+            popup.classList.remove('_active');
+        })
+    }
+}
+popup();
+arrow_scroll();
 dynamicAdaptive();
 burger();
