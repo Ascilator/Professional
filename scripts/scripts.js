@@ -6,7 +6,12 @@ jQuery(function () {
             $(this).children('.link_body').slideToggle();
         }
     })
-
+    if ($('html').width() < 700) {
+        $('.menu_link').click(function () {
+            $('.menu_link').removeClass('_active')
+            $(this).addClass('_active')
+        })
+    }
     $('.slider_wy_we_body').slick({
         slidesToShow: 3,
         slidesToScroll: 1,

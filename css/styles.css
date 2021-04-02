@@ -173,6 +173,11 @@ textarea {
   border-radius: 30px;
   cursor: pointer;
   white-space: nowrap;
+  transition: 0.3s;
+}
+
+.header .wrapper .upper_part .planers_btn:hover {
+  transform: translate(0, -5px);
 }
 
 .header .wrapper .upper_part .contuct_part {
@@ -186,8 +191,7 @@ textarea {
 
 .header .wrapper .upper_part .contuct_part .contuct_item .upper {
   margin-bottom: 4px;
-  font-weight: 400;
-  font-style: italic;
+  font-weight: 600;
   font-size: 18px;
   line-height: 22px;
   color: #000000;
@@ -202,10 +206,16 @@ textarea {
   line-height: 17px;
   color: #000000;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.header .wrapper .upper_part .contuct_part .contuct_item .lower:hover {
+  text-decoration: underline;
 }
 
 .header .wrapper .upper_part .contuct_part .contuct_item:last-child {
   text-align: right;
+  margin-right: 0;
 }
 
 .header .wrapper .upper_part .burger {
@@ -257,6 +267,10 @@ textarea {
 }
 
 .header .wrapper .lower_part .menu_link:hover:after {
+  opacity: 1;
+}
+
+.header .wrapper .lower_part .menu_link._active:after {
   opacity: 1;
 }
 
@@ -382,7 +396,7 @@ h2.block_title {
   min-height: 680px;
   background-image: url("../img/male_first_screen.png");
   background-position: 100% 100%;
-  background-size: 60% auto;
+  background-size: contain;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -391,6 +405,10 @@ h2.block_title {
   display: flex;
   align-items: center;
   height: 100%;
+}
+
+.main .first_full_screen .wrapper .content_box {
+  margin-bottom: 10%;
 }
 
 .main .first_full_screen .wrapper .content_box .title {
@@ -489,6 +507,7 @@ h2.block_title {
   min-width: 600px;
   padding-right: 50px;
   background: #c50808;
+  transition: 0.3s;
 }
 
 .main .first_full_screen .reg_label .img {
@@ -526,6 +545,10 @@ h2.block_title {
 
 .main .first_full_screen .reg_label .arrow img {
   width: 100%;
+}
+
+.main .first_full_screen .reg_label:hover {
+  transform: translate(0, -5px);
 }
 
 .main .first_full_screen._departament {
@@ -648,7 +671,7 @@ h2.block_title {
 
 .main .why_we_cont .wy_we_item .item_subtitle {
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.4;
   letter-spacing: 0.03em;
   color: #333333;
 }
@@ -745,7 +768,7 @@ h2.block_title {
   width: 100%;
   height: 100%;
   display: block;
-  background: #0005;
+  background: #0008;
 }
 
 .main .departament_links .block_cont .img_item:nth-child(2) {
@@ -876,7 +899,7 @@ h2.block_title {
   width: 100%;
   height: 100%;
   display: block;
-  background: #0005;
+  background: #0008;
 }
 
 .main .craft_secure_links .block_cont .col:first-child .img_big_item {
@@ -985,7 +1008,7 @@ h2.block_title {
   width: 100%;
   height: 100%;
   display: block;
-  background: #0005;
+  background: #0008;
 }
 
 .main .about_course {
@@ -1038,6 +1061,7 @@ h2.block_title {
 }
 
 .main .about_course .wrapper .right_text .learn_more {
+  margin-top: 20px;
   cursor: pointer;
   border: 2px solid #c4c4c4;
   box-sizing: border-box;
@@ -1046,6 +1070,12 @@ h2.block_title {
   font-size: 18px;
   color: #000000;
   padding: 10px 50px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.main .about_course .wrapper .right_text .learn_more:hover {
+  background: #eee;
 }
 
 .main .about_us {
@@ -1266,7 +1296,6 @@ h2.block_title {
 
 .main .contucts .content_box .contuct_item .text,
 .main .contucts .content_box .contuct_item a {
-  font-style: italic;
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 0.05em;
@@ -1356,7 +1385,6 @@ h2.block_title {
   font-size: 20px;
   line-height: 24px;
   color: #000000;
-  font-style: italic;
   line-height: 2;
 }
 
@@ -1408,7 +1436,7 @@ h2.block_title {
   width: 100%;
   height: 100%;
   display: block;
-  background: #0005;
+  background: #0008;
 }
 
 .main .programs .programs_body .col:first-child .img_item:nth-child(3) {
@@ -1510,7 +1538,7 @@ h2.block_title {
   width: 100%;
   height: 100%;
   display: block;
-  background: #0005;
+  background: #0008;
 }
 
 .main .programs .programs_body .col:nth-child(2) .img_item:nth-child(1) {
@@ -1684,7 +1712,7 @@ h2.block_title {
   width: 100%;
   height: 100%;
   display: block;
-  background: #0005;
+  background: #0008;
 }
 
 .main .factory_slider_block .factory_body .slider_item img {
@@ -1780,9 +1808,13 @@ h2.block_title {
   color: #000000;
 }
 
+.main .sales_part .wrapper .act_body .act_item:hover .title {
+  text-decoration: underline;
+}
+
 .main .form_cont {
   background: #f5f4f2;
-  padding-bottom: 150px;
+  padding-bottom: 130px;
 }
 
 .main .form_cont .wrapper .block_title {
@@ -1876,7 +1908,6 @@ h2.block_title {
 .main .form_cont .wrapper .submition_part .check_box label .text {
   font-size: 16px;
   line-height: 19px;
-  text-transform: uppercase;
   color: #000000;
 }
 
@@ -1889,6 +1920,11 @@ h2.block_title {
   font-size: 20px;
   text-transform: uppercase;
   color: #000000;
+  transition: 0.3s;
+}
+
+.main .form_cont .wrapper .submition_part button:hover {
+  background: #a6a8a9;
 }
 
 .main .form_cont._departament {
@@ -2211,11 +2247,12 @@ h2.block_title {
 
 .footer .wrapper .footer_body .footer_col:nth-child(2) {
   flex: 0 1 240px;
-  margin: 0 70px 0 45px;
+  margin: 20px 70px 0 45px;
 }
 
 .footer .wrapper .footer_body .footer_col:nth-child(3) {
   flex: 0 1 530px;
+  margin-top: 20px;
 }
 
 .footer .wrapper .footer_body .footer_col:nth-child(3) .item_body {
@@ -2375,6 +2412,11 @@ h2.block_title {
   border-radius: 40px;
   font-size: 16px;
   color: #fff;
+  transition: 0.3s;
+}
+
+.popup_call .popup form .button button:hover {
+  background: #df1515cb;
 }
 
 .popup_call .popup .cross {
@@ -2895,10 +2937,6 @@ h2.block_title {
     margin-bottom: 0;
   }
 
-  .header .wrapper .lower_part .menu_link:after {
-    display: none;
-  }
-
   .header .wrapper .lower_part ._with_add .link_title:after {
     display: none;
   }
@@ -3174,6 +3212,8 @@ h2.block_title {
 
   .main .first_full_screen .wrapper .content_box._error .title {
     line-height: 0.9;
+    font-size: 120px;
+    margin-bottom: 0;
   }
 
   .main .first_full_screen .wrapper .content_box._error .desc_2 {
