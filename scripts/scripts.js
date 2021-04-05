@@ -196,27 +196,38 @@ let popup = () => {
     let popup_2 = document.querySelector('.popup_sms');
     let popup_3 = document.querySelector('.popup_zayavka');
 
+
+
     let black = document.querySelector('.black_href');
-    let cross = document.querySelector('.cross');
+    let cross = document.querySelectorAll('.cross');
 
 
 
     if (cross && black && popup && popup_2) {
-        if (popup_3) {
+        if (popup_3 && document.querySelector('.red_btn')) {
             document.querySelector('.red_btn').addEventListener('click', function () {
                 this.classList.add('_active');
                 black.classList.add('_active');
                 popup_3.classList.add('_active');
             })
-            cross.addEventListener('click', function () {
-                this.classList.remove('_active');
-                black.classList.remove('_active');
-                popup_3.classList.remove('_active');
+            cross.forEach(el => {
+                el.addEventListener('click', function () {
+                    this.classList.remove('_active');
+                    black.classList.remove('_active');
+                    popup_3.classList.remove('_active');
+                })
             })
             black.addEventListener('click', function () {
                 this.classList.remove('_active');
                 black.classList.remove('_active');
                 popup_3.classList.remove('_active');
+            })
+        }
+        if (document.querySelector('.red_button')) {
+            document.querySelector('.red_button').addEventListener('click', function () {
+                this.classList.add('_active');
+                black.classList.add('_active');
+                popup_3.classList.add('_active');
             })
         }
         document.querySelector('.js_contuct_item_1>.lower').addEventListener('click', function () {
@@ -229,12 +240,15 @@ let popup = () => {
             black.classList.add('_active');
             popup.classList.add('_active');
         })
-        cross.addEventListener('click', function () {
-            this.classList.remove('_active');
-            black.classList.remove('_active');
-            popup.classList.remove('_active');
-            popup_2.classList.remove('_active');
+        cross.forEach(el => {
+            el.addEventListener('click', function () {
+                this.classList.remove('_active');
+                black.classList.remove('_active');
+                popup.classList.remove('_active');
+                popup_2.classList.remove('_active');
+            })
         })
+
         black.addEventListener('click', function () {
             this.classList.remove('_active');
             black.classList.remove('_active');

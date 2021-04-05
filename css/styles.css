@@ -858,6 +858,10 @@ h2.block_title {
   background: #f5f4f2;
 }
 
+.main .craft_secure_links .some_words {
+  margin-bottom: 130px;
+}
+
 .main .craft_secure_links .some_words p {
   font-family: "Proxima Nova Rg";
   font-size: 18px;
@@ -1161,7 +1165,7 @@ h2.block_title {
 .main .about_us .about_us_body {
   display: flex;
   align-items: flex-start;
-  margin: 0 -30px 120px;
+  margin: 0 -30px 30px;
 }
 
 .main .about_us .about_us_body .about_us_item {
@@ -1890,6 +1894,7 @@ h2.block_title {
   opacity: 0;
   top: 0;
   left: 0;
+  visibility: hidden;
 }
 
 .main .form_cont .wrapper .submition_part .check_box input:checked + label .icon img {
@@ -2785,7 +2790,7 @@ h2.block_title {
   }
 
   .main .about_us .about_us_body {
-    margin: 0 -20px 50px;
+    margin: 0 -20px 20px;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -2894,8 +2899,19 @@ h2.block_title {
     display: block;
   }
 
+  .main .form_cont._departament {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .main .form_cont._vacations {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   .main .form_cont {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .main .our_teachers .block_body .teacher_item .img {
@@ -2911,7 +2927,8 @@ h2.block_title {
   }
 
   .main .our_teachers {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
   }
 
   .main .our_thanks .wrapper .our_thanks_body .slider_item .name {
@@ -3385,6 +3402,10 @@ h2.block_title {
     margin-bottom: 20px;
   }
 
+  .main .craft_secure_links .some_words {
+    margin-bottom: 0;
+  }
+
   .main .about_course .wrapper .right_text .block_title {
     margin-bottom: 20px;
   }
@@ -3397,6 +3418,11 @@ h2.block_title {
     font-size: 18px;
   }
 
+  .main .about_us .block_header {
+    margin-bottom: 20px;
+    padding-top: 0px;
+  }
+
   .main .about_us .about_us_body .about_us_item .icon {
     margin-bottom: 10px;
   }
@@ -3407,6 +3433,10 @@ h2.block_title {
 
   .main .about_us .about_us_body .about_us_item {
     flex: 0 1 100%;
+  }
+
+  .main .about_us {
+    padding-bottom: 30px;
   }
 
   .main .vacations .desc {
