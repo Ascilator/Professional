@@ -230,6 +230,19 @@ let popup = () => {
                 popup_3.classList.add('_active');
             })
         }
+        if (document.querySelector('.js-learn-more')) {
+            document.querySelector('.js-learn-more').addEventListener('click', function () {
+                this.classList.add('_active');
+                black.classList.add('_active');
+                document.querySelector('.text_popup').classList.add('_active');
+            })
+            black.addEventListener('click', function () {
+                this.classList.remove('_active');
+                black.classList.remove('_active');
+                document.querySelector('.text_popup').classList.remove('_active');
+            })
+
+        }
         document.querySelector('.js_contuct_item_1>.lower').addEventListener('click', function () {
             this.classList.add('_active');
             black.classList.add('_active');

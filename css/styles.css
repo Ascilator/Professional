@@ -370,7 +370,7 @@ textarea {
 }
 
 .header .wrapper .lower_part .contuct_item .lower {
-  display: none;
+  margin-top: 10px;
 }
 
 h2.block_title {
@@ -1480,7 +1480,7 @@ h2.block_title {
 }
 
 .main .programs .programs_body .col:first-child .img_item:nth-child(4) .content {
-  padding: 60% 0 52px 54px;
+  padding: 55% 0 53px 54px;
 }
 
 .main .programs .programs_body .col:first-child .img_big_item {
@@ -1831,6 +1831,8 @@ h2.block_title {
 
 .main .sales_part .wrapper .act_body .act_item:hover .title {
   text-decoration: underline;
+  -webkit-text-decoration-color: #df1515;
+          text-decoration-color: #df1515;
 }
 
 .main .form_cont {
@@ -2266,6 +2268,26 @@ h2.block_title {
   line-height: 17px;
   color: #ffffff;
   display: block;
+  transition: 0.3s;
+  display: inline-block;
+  position: relative;
+}
+
+.footer .wrapper .footer_body .footer_col .footer_link:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  display: block;
+  background: #df1515;
+  z-index: 10;
+  opacity: 0;
+}
+
+.footer .wrapper .footer_body .footer_col .footer_link:hover:after {
+  opacity: 1;
 }
 
 .footer .wrapper .footer_body .footer_col:nth-child(2) {
@@ -2522,6 +2544,55 @@ h2.block_title {
 }
 
 .black_href._active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.text_popup {
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  position: fixed;
+  height: 100%;
+  max-width: 700px;
+  padding: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  z-index: 1000;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.text_popup p {
+  margin-bottom: 20px;
+}
+
+.text_popup ol {
+  margin-bottom: 20px;
+}
+
+.text_popup ol li {
+  padding-left: 20px;
+  position: relative;
+}
+
+.text_popup ol li:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #000;
+  display: block;
+}
+
+.text_popup._active {
   opacity: 1;
   visibility: visible;
 }
@@ -3437,6 +3508,7 @@ h2.block_title {
 
   .main .about_us {
     padding-bottom: 30px;
+    padding-top: 10px;
   }
 
   .main .vacations .desc {
