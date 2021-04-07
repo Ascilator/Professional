@@ -44,7 +44,6 @@ jQuery(function () {
         prevArrow: $('.factory_controls').children().eq(0),
         //variableWidth: true,
         initialSlide: 1,
-        infinite: false,
         centerMode: true,
         responsive: [
             {
@@ -57,6 +56,16 @@ jQuery(function () {
             },
         ]
     })
+
+    $('#i_agree').siblings('label').children('.text').click(function () {
+        $('.popup_privaci').addClass('_active');
+        $('.black_href').addClass('_active');
+    })
+    $('.black_href').click(function () {
+        $('.popup_privaci').removeClass('_active');
+        $('.black_href').removeClass('_active');
+    })
+
     $('.our_thanks_body').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
