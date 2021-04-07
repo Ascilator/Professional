@@ -1742,6 +1742,11 @@ h2.block_title {
   position: relative;
 }
 
+.main .factory_slider_block .factory_body .slider_item picture {
+  width: 100%;
+  height: 100%;
+}
+
 .main .factory_slider_block .factory_body .slider_item .img {
   position: relative;
   display: block;
