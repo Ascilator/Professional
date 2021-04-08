@@ -2219,7 +2219,7 @@ h2.block_title {
 }
 
 .footer {
-  padding: 55px 0;
+  padding: 55px 0 0;
   background: #383d4e;
 }
 
@@ -2346,6 +2346,19 @@ h2.block_title {
 
 .footer .wrapper .footer_body .footer_col:nth-child(3) .item_body {
   max-width: 220px;
+}
+
+.footer .wrapper .created {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.footer .wrapper .created .text {
+  margin-left: 20px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
 }
 
 .arrow_up {
