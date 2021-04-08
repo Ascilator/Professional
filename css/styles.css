@@ -1962,6 +1962,10 @@ h2.block_title {
   color: #000000;
 }
 
+.main .form_cont .wrapper .submition_part .check_box label .text span {
+  text-decoration: underline;
+}
+
 .main .form_cont .wrapper .submition_part button {
   padding: 17px 56px;
   background: #dcdfe0;
@@ -2186,7 +2190,7 @@ h2.block_title {
 
 .main .map_cont .left_part .wrapper .adress_item .icon {
   margin-right: 18px;
-  transform: translate(0, 3px);
+  transform: translate(0, 6px);
 }
 
 .main .map_cont .left_part .wrapper .adress_item .text {
@@ -2534,6 +2538,12 @@ h2.block_title {
   font-size: 12px;
   line-height: 14px;
   color: #000000;
+}
+
+.popup_call .popup form .check_box label .text span,
+.popup_sms .popup form .check_box label .text span,
+.popup_zayavka .popup form .check_box label .text span {
+  text-decoration: underline;
 }
 
 .popup_call .popup form .button,
