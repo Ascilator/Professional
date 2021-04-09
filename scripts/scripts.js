@@ -115,6 +115,28 @@ jQuery(function () {
             },
         ]
     })
+
+
+
+
+
+    $(window).scroll(function () {
+
+        if ($(window).scrollTop() > 20) {
+            $('.header').addClass('_active');
+        } else {
+            $('.header').removeClass('_active');
+        }
+
+    })
+
+
+
+
+
+
+
+
     AOS.init({
         disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
         startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on

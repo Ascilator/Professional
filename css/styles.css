@@ -390,6 +390,29 @@ textarea {
   font-size: 18px;
 }
 
+.header._active .submenu {
+  display: flex;
+  justify-content: center;
+}
+
+.header._active .upper_part {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.header._active .lower_part {
+  display: none;
+}
+
+.header._active .planers_btn {
+  display: none;
+}
+
+.header._active .contuct_item:first-child {
+  display: none;
+}
+
 h2.block_title {
   font-size: 64px;
   line-height: 78/64;
@@ -1187,7 +1210,7 @@ h2.block_title {
 .main .about_us .about_us_body {
   display: flex;
   align-items: flex-start;
-  margin: 0 -30px 30px;
+  margin: 0 -30px 60px;
 }
 
 .main .about_us .about_us_body .about_us_item {
@@ -2352,17 +2375,17 @@ h2.block_title {
   max-width: 220px;
 }
 
-.footer .wrapper .created {
+.footer .wrapper .created_cont {
   display: flex;
-  align-items: center;
-  padding-bottom: 30px;
+  justify-content: flex-end;
 }
 
-.footer .wrapper .created .text {
-  margin-left: 20px;
-  font-size: 12px;
-  line-height: 14px;
-  color: #ffffff;
+.footer .wrapper .created_cont .created {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 30px;
+  margin-left: auto;
 }
 
 .arrow_up {
@@ -2667,10 +2690,11 @@ h2.block_title {
 .popup_privaci {
   position: fixed;
   background: #fff;
-  top: 10%;
+  top: 20px;
   left: 50%;
   transform: translate(calc(-50% - 20px), 0);
   width: calc(100% - 40px);
+  height: calc(100% - 40px);
   margin: 0 20px;
   max-width: 900px;
   padding: 20px;
@@ -2678,7 +2702,6 @@ h2.block_title {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
-  height: 100%;
   overflow: auto;
 }
 
@@ -2713,25 +2736,8 @@ h2.block_title {
     display: none;
   }
 
-  .header .wrapper .upper_part .planers_btn {
-    display: none;
-  }
-
-  .header .wrapper .upper_part .contuct_part .contuct_item:first-child {
-    display: none;
-  }
-
   .header .wrapper .lower_part .menu_link {
     margin: 0 20px 20px;
-  }
-
-  .header .wrapper .lower_part {
-    display: none;
-  }
-
-  .header .wrapper .submenu {
-    display: flex;
-    justify-content: center;
   }
 
   .main .first_full_screen {
@@ -3249,12 +3255,16 @@ h2.block_title {
     top: 92px;
   }
 
-  .header .wrapper .submenu {
+  .header .wrapper {
+    padding-top: 20px;
+  }
+
+  .header._active .submenu {
     display: none;
   }
 
-  .header .wrapper {
-    padding-top: 20px;
+  .header._active .planers_btn {
+    display: flex;
   }
 
   .main .first_full_screen .wrapper .content_box .title {
